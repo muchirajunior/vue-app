@@ -1,12 +1,16 @@
 <template>
   <h1> {{title}} </h1>
   <h4>{{name}}</h4>
+  <span>{{location}}</span>
+  <MyModal />
 </template>
 
 <script>
+  import MyModal from "./components/Modal.vue"
 
   export default {
     name: 'App',
+    components:{ MyModal},
     data() {
       return {
         title: "Hello world Vue (:",
