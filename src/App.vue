@@ -2,7 +2,7 @@
   <h1> {{title}} </h1>
   <h4>{{name}}</h4>
   <span>{{location}}</span>
-  <MyModal />
+  <MyModal header="The About Us Modal" />
 </template>
 
 <script>
@@ -28,6 +28,8 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    padding-top: 60px;
+    background-color: #bbbcbd;
+    min-height: 90vh;
   }
 </style>
