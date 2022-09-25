@@ -1,10 +1,8 @@
 <template>
-    <div class="backdrop">
+    <div class="backdrop" @click="closeModal()">
         <div class="modal">
             <div class="modal-header"> {{header}} </div>
-            <div class="modal-content">
-                modal content
-            </div>
+            <div class="modal-content">{{text}} </div>
         </div>
     </div>
 </template>
@@ -12,7 +10,15 @@
 <script>
     export default{
         name:"MyModal",
-        props:["header"]
+        props:["header","text"],
+        methods:{
+        closeModal(){
+            this.$emit("close")
+            console.log("closing modal;");
+            let modal=document.getElementsByClassName("backdrop");
+            modal.style.display ="none";   
+        }
+    }
     }
 </script>
 
@@ -36,5 +42,8 @@
         color: rgb(17, 149, 182);
         font-size: 20px;
         font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
+
 </style>

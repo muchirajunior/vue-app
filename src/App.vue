@@ -1,16 +1,15 @@
 <template>
-  <h1> {{title}} </h1>
-  <h4>{{name}}</h4>
-  <span>{{location}}</span>
-  <MyModal header="The About Us Modal" />
+  <!-- <MyModal header="The About Us Modal" text="Grab our new offers from the new outlets, yeeeeey !!!" /> -->
+  <NinjaTimer />
 </template>
 
 <script>
-  import MyModal from "./components/Modal.vue"
+
+import NinjaTimer from "./components/NinjaTimer.vue";
 
   export default {
     name: 'App',
-    components:{ MyModal},
+    components:{  NinjaTimer },
     data() {
       return {
         title: "Hello world Vue (:",
@@ -29,7 +28,7 @@
     text-align: center;
     color: #2c3e50;
     padding-top: 60px;
-    background-color: #bbbcbd;
+    background-color: white;
     min-height: 90vh;
   }
 </style>
