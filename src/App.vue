@@ -28,8 +28,9 @@ import MyForm from "./components/forms/form.vue";
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+    background-color: rgb(226, 225, 225);
+    min-height: 100vh;
     padding-top: 30px;
-    background-color: white;
-    min-height: 90vh;
+    margin: 0;
   }
 </style>
