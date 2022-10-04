@@ -1,15 +1,16 @@
 <template>
   <!-- <MyModal header="The About Us Modal" text="Grab our new offers from the new outlets, yeeeeey !!!" /> -->
-  <NinjaTimer />
+  <!-- <NinjaTimer /> -->
+  <MyForm />
 </template>
 
 <script>
 
-import NinjaTimer from "./components/NinjaTimer.vue";
+import MyForm from "./components/forms/form.vue";
 
   export default {
     name: 'App',
-    components:{  NinjaTimer },
+    components:{ MyForm},
     data() {
       return {
         title: "Hello world Vue (:",
@@ -27,7 +28,7 @@ import NinjaTimer from "./components/NinjaTimer.vue";
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    padding-top: 60px;
+    padding-top: 30px;
     background-color: white;
     min-height: 90vh;
   }

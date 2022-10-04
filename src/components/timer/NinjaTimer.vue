@@ -1,25 +1,31 @@
 <template>
     <div class="container">
-        <span class="head">The Ninja Timer</span>
-        <button class="btn-play" @click="tongleTimer()">{{play ? "Play":"Pause"}}</button>
+        <span class="head">The Ninja Timer </span>
+        <button class="btn-play" @click="tongleTimer()"  :disabled="play">play </button>
+        <Block v-if="play"/>
+        <Results  />
     </div>
 </template>
 
 <script >
+import Block from './Block.vue';
+import Results from './Results.vue';
     export default{
-        data(){
-            return {
-                play:true
-            }
-        },
-        methods:{
-            tongleTimer(){
-                this.play=!this.play;
-                console.log(this.play ? "start timer":"stop timer");
-            }
-
+    data() {
+        return {
+            play: false,
+            delay:2000,
+            results:0
+        };
+    },
+    methods: {
+        tongleTimer() {
+            this.play = !this.play;
+            console.log(this.play ? "start timer" : "stop timer");
         }
-    }
+    },
+    components: { Block, Results }
+}
 </script>
 
 <style scoped>
